@@ -8,13 +8,15 @@ html {
     box-sizing: inherit; /* keep */
 }
 body {
-    font-family: sans-serif;
+    font-family: 'Fira Sans', 'Arial', 'Verdana', sans-serif;
     background: #5598b2; /* keep */
     color: #333; /* keep */
     margin: 0; /* keep */
 }
 h1, h2 {
-    font-family: serif;
+  font-family: 'Cormorant Garamond', 'Georgia', 'Baskerville', serif;
+  font-size: 170%;
+  margin: 0;
 }
 #tagline {
     font-style: italic;
@@ -37,11 +39,15 @@ img {
     max-width: 1280px; /* keep */
     margin: auto; /* keep */
     display: grid; /* keep */
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5,auto);
     grid-template-areas:
-        "header arial georgia pairing bobwhite-quail"
-        "readability line-length helvetica typeface footer";
+    "header header header header"
+    "pairing pairing arial georgia"
+    "bobwhite-quail readability readability readability"
+    "bobwhite-quail line-length line-length line-length"
+    "typeface typeface typeface helvetica"
+    "footer footer footer footer";
 }
 
 /* all grid items -
@@ -53,43 +59,69 @@ img {
 header {
     grid-area: header; /* keep */
     background: #fff; /* keep */
+    text-align: center;
+    padding: 1.2rem;
 }
 #arial {
     grid-area: arial; /* keep */
     background: #a8e8ff; /* keep */
+    padding: 2.5rem;
+    margin: 0;
+    font-size: small;
 }
 #georgia {
     grid-area: georgia; /* keep */
     background: #a8e8ff; /* keep */
+    padding: 2.5rem;
+    margin: 0;
+    font-size: small;
 }
 #pairing {
     grid-area: pairing; /* keep */
     background: #a8e8ff; /* keep */
+    padding: 1.5em;
+    margin: 0;
+    font-size: 120%;
 }
 #bobwhite-quail {
     grid-area: bobwhite-quail; /* keep */
     background: #d2f4ff; /* keep */
+    padding: 2.5em;
+    font-size: small;
+    align-items: center;
 }
 #readability {
     grid-area: readability; /* keep */
     background: #d2f4ff; /* keep */
+    padding: 1.5rem;
 }
 #line-length {
     grid-area: line-length; /* keep */
     background: #d2f4ff; /* keep */
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-bottom: 1.5rem;
+    margin: 0;
 }
 #helvetica {
     grid-area: helvetica; /* keep */
     background: #fff; /* keep */
+    margin: 0;
+    padding: 1rem;
+    font-size: small;
 }
 #typeface {
     grid-area: typeface; /* keep */
     color: #d2f4ff; /* keep */
     background: #5598b2; /* keep */
+    text-shadow: 1px 1px #000;
+    padding: 1.5em;
 }
 footer {
     grid-area: footer; /* keep */
     background: #b2988a; /* keep */
+    padding: 1%;
+    text-align: center;
 }
 
 /* end of all 10 grid items */
@@ -105,3 +137,50 @@ a:hover {
 }
 
 /* media queries below - only 1 is needed */
+
+@media screen and (max-width:900px) {
+ #container {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(9,auto);
+    grid-template-areas:
+    "header header"
+    "arial georgia"
+    "pairing pairing"
+    "bobwhite-quail bobwhite-quail"
+    "readability readability "
+    "line-length line-length"
+    "helvetica helvetica"
+    "typeface typeface"
+    "footer footer";
+
+}
+
+header {
+    padding: 1.2rem;
+}
+
+header img {
+  display: none;
+}
+#arial {
+    padding: 2rem;
+}
+#georgia {
+    padding: 2rem;
+}
+#pairing {
+    padding-top: .4rem;
+}
+#bobwhite-quail {
+  padding-bottom: .5rem;
+}
+
+}
+#typeface {
+    padding: 1em;
+}
+footer {
+    padding: .4em;
+}
+
+}
