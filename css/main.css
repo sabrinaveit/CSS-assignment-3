@@ -139,48 +139,46 @@ a:hover {
 /* media queries below - only 1 is needed */
 
 @media screen and (max-width:900px) {
- #container {
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(9,auto);
-    grid-template-areas:
-    "header header"
-    "arial georgia"
-    "pairing pairing"
-    "bobwhite-quail bobwhite-quail"
-    "readability readability "
-    "line-length line-length"
-    "helvetica helvetica"
-    "typeface typeface"
-    "footer footer";
+    #container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(9,auto);
+        grid-template-areas:
+        "header header"
+        "arial georgia"
+        "pairing pairing"
+        "bobwhite-quail bobwhite-quail"
+        "readability readability "
+        "line-length line-length"
+        "helvetica helvetica"
+        "typeface typeface"
+        "footer footer";
+    }
 
-}
+    header {
+        padding: 1.2rem;
+    }
 
-header {
-    padding: 1.2rem;
-}
+    header img {
+        display: none;
+    }
+    #arial {
+        padding: 2rem;
+    }
+    #georgia {
+        padding: 2rem;
+    }
+    #pairing {
+        padding-top: .4rem;
+    }
+    #bobwhite-quail {
+        padding-bottom: .5rem;
+    }
 
-header img {
-  display: none;
-}
-#arial {
-    padding: 2rem;
-}
-#georgia {
-    padding: 2rem;
-}
-#pairing {
-    padding-top: .4rem;
-}
-#bobwhite-quail {
-  padding-bottom: .5rem;
-}
-
-}
-#typeface {
-    padding: 1em;
-}
-footer {
-    padding: .4em;
-}
+    #typeface {
+        padding: 1em;
+    }
+    footer {
+        padding: .4em;
+    }
 
 }
